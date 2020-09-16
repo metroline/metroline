@@ -1,4 +1,9 @@
-# Metroline
+<p align="center">
+  <img alt="Metroline Logo" src="https://raw.githubusercontent.com/metroline/metroline-brand/master/metroline-logo.svg" width="100" />
+</p>
+<h1 align="center">
+  Metroline
+</h1>
 
 Open Source Continuous Integration and Delivery platform built with Docker, NodeJS, React, D3 and Socket.io.
 
