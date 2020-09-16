@@ -5,8 +5,9 @@ COPY ./ /repo/
 WORKDIR /repo
 
 RUN apk add --no-cache git \
-  && npm install \
-  && npm run build
+  && npm ci \
+  && npm run build \
+  && npm prune --production
 
 FROM node:12-alpine
 
