@@ -7,7 +7,7 @@
 
 Open Source Continuous Integration and Delivery platform built with Docker, NodeJS, React, D3 and Socket.io.
 
-> Found a security issue ? Please [let us know](https://github.com/metroline/metroline-server/security/advisories/new) !
+> Found a security issue ? Please [let us know](https://github.com/metroline/metroline/security/advisories/new) !
 
 ## Links
 
