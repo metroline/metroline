@@ -1,0 +1,22 @@
+version: "3"
+
+services:
+  gitea:
+    image: gitea/gitea:latest
+    restart: unless-stopped
+    volumes:
+      - ./data/gitea:/data
+    ports:
+      - "3003:3000"
+      - "222:22"
+
+  mongo:
+    image: mongo:4.2-bionic
+    restart: unless-stopped
+    volumes:
+      - metroline-mongo:/data/db
+    ports:
+      - 127.0.0.1:27017:27017
+
+volumes:
+  metroline-mongo:

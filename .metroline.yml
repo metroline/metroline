@@ -1,0 +1,61 @@
+version: '1'
+image: node:12-alpine
+jobs:
+  install:
+    script:
+      - npm i
+      - echo "0.0.0-$(date +%Y%m%d%H%M%S)" > VERSION
+  compute-version:
+    when:
+      branch:
+        - master
+        - dev
+    script:
+      - source ./ci/setup-git.sh "$RELEASE_DEPLOY_KEY"
+      - npm run semantic-release -- --no-ci --repositoryUrl $METROLINE_REPO_URL_SSH --dry-run --branches $METROLINE_COMMIT_BRANCH
+      - '[[ $METROLINE_COMMIT_BRANCH != "master" ]] && echo -n "-$(date +%Y%m%d%H%M%S)" >> VERSION'
+      - cat VERSION
+    dependencies:
+      - install
+  build:
+    script:
+      - apk add git # for build info
+      - npm version --no-git-tag-version $(cat VERSION) --allow-same-version
+      - npm run build
+    dependencies:
+      - compute-version
+  lint:
+    script:
+      - npm run lint
+    dependencies:
+      - compute-version
+  test:
+    script:
+      - npm run test
+    dependencies:
+      - compute-version
+  release:
+    when:
+      branch:
+        - master
+    script:
+      - source ./ci/setup-git.sh "$RELEASE_DEPLOY_KEY"
+      - npm run semantic-release -- --no-ci --repositoryUrl $METROLINE_REPO_URL_SSH
+    dependencies:
+      - build
+      - lint
+      - test
+  realign-dev:
+    when:
+      branch:
+        - master
+    script:
+      - source ./ci/setup-git.sh "$RELEASE_DEPLOY_KEY"
+      - HEAD=$(git rev-parse HEAD | tr -d '\n')
+      - git fetch
+      - git checkout dev
+      - 'git merge --ff -m "chore: realign dev on master [ci skip]" origin/master'
+      - git push
+      - git checkout $HEAD
+    dependencies:
+      - release
