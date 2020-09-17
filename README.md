@@ -23,7 +23,7 @@ Open Source Continuous Integration and Delivery platform built with Docker, Node
 - branch conditions
 - status conditions
 - shared workspace, no artifact headache
-- secret masking in logs ([best effort](#))
+- secret masking in logs ([best effort](https://docs.metroline.io/ci-configuration/secrets#a-note-on-secret-masking))
 - compatible with Gitlab (support subgroups), Gitea (coming soon: Github, Bitbucket, Gogs)
 - easy install with Docker and Docker Compose
 - model complex workflows (we haven't yet implemented workspace merging)
