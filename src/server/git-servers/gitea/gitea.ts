@@ -42,7 +42,7 @@ const $repos = array().items(
     }),
     owner: object({ login: string().required() }),
     private: boolean().required(),
-    internal: boolean().required(),
+    internal: boolean().optional(),
   }),
 );
 

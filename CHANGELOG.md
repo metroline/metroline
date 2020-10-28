@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/metroline/metroline/compare/v1.0.1...v1.0.2) (2020-10-28)
+
+
+### Bug Fixes
+
+* gitea repo.internal optional in 1.12.5 ([#2](https://github.com/metroline/metroline/issues/2), [#1](https://github.com/metroline/metroline/issues/1)) ([7739322](https://github.com/metroline/metroline/commit/773932276cf9399ff74cd5956143fa3d87ba83c4))
+
 ## [1.0.1](https://github.com/metroline/metroline/compare/v1.0.0...v1.0.1) (2020-10-07)
 
 
