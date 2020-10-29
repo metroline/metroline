@@ -37,7 +37,7 @@ export function createCloneJob(
       `echo -n "$${sshPrivateKeyEnvVar}" > ${sshKeyPath}`,
       `chmod 600 ${sshKeyPath}`,
       // eslint-disable-next-line max-len
-      `ssh-agent sh -c 'ssh-add ${sshKeyPath}; GIT_SSH_COMMAND="ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no" git clone ${sshUrl} ${REPO_PATH} --quiet'`,
+      `ssh-agent sh -c 'ssh-add ${sshKeyPath}; GIT_SSH_COMMAND="ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no" git clone ${sshUrl} ${REPO_PATH} --quiet --recurse-submodules'`,
       'git config core.sshCommand \'ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no\'',
       `git checkout ${commitSha} --quiet`,
     ],
