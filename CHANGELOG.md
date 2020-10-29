@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/metroline/metroline/compare/v1.0.2...v1.1.0) (2020-10-29)
+
+
+### Features
+
+* automatically init git submodules ([bbb09a6](https://github.com/metroline/metroline/commit/bbb09a62ec9d30052adffd0c9bb6f3c4e6e1a7b8))
+
 ## [1.0.2](https://github.com/metroline/metroline/compare/v1.0.1...v1.0.2) (2020-10-28)
 
 
