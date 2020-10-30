@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/metroline/metroline/compare/v1.1.0...v1.2.0) (2020-10-30)
+
+
+### Features
+
+* return repo setup public key to admins ([0c25cd2](https://github.com/metroline/metroline/commit/0c25cd218b6d46e566dcb6768ec4dadfc15fe407))
+
 # [1.1.0](https://github.com/metroline/metroline/compare/v1.0.2...v1.1.0) (2020-10-29)
 
 
