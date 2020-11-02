@@ -1,3 +1,10 @@
+## [1.2.1](https://github.com/metroline/metroline/compare/v1.2.0...v1.2.1) (2020-11-02)
+
+
+### Bug Fixes
+
+* docker auth not given to jobs ([d45f2cb](https://github.com/metroline/metroline/commit/d45f2cba4b79cc8c58b82f7b7b506e86368002d9))
+
 # [1.2.0](https://github.com/metroline/metroline/compare/v1.1.0...v1.2.0) (2020-10-30)
 
 
