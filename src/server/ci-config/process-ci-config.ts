@@ -62,6 +62,7 @@ function initPipelineJobs(
           ...job.script,
           ...(ciConfig.afterScript || []),
         ],
+        dockerAuth: ciConfig.docker?.auth,
         allowFailure: job.allowFailure,
         status: 'created',
         dependencies: hasDependencies ? job.dependencies : [CLONE_JOB_NAME],
