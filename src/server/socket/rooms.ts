@@ -36,7 +36,7 @@ function joinRoom(
         socket.join(room);
         logger.debug(`${chalk.bold(socketUser.name)} joined room ${chalk.bold(room)}`);
       } else {
-        logger.debug(`${chalk.bold(socketUser.name)} is ${chalk.red('not')} allowed to join room ${chalk.bold(room)}`);
+        logger.debug(`${chalk.bold(socket.id)} is ${chalk.red('not')} allowed to join room ${chalk.bold(room)}`);
       }
     })
     .catch(err => logger.error(err));

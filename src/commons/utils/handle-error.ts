@@ -7,7 +7,10 @@ import { ValidationError } from 'joi';
 const logger = new Logger('metroline.server:handleError');
 
 export function handleError(err: any, req: Request, res: Response, next: NextFunction): void {
+  logger.debug(err);
+
   if (res.headersSent) {
+    logger.debug('Headers sent, calling next(err)');
     return next(err);
   }
 
@@ -23,12 +26,17 @@ export function handleError(err: any, req: Request, res: Response, next: NextFun
 
   const status = err instanceof ValidationError ? 400 : err?.statusCode || 500;
   const error = err instanceof ValidationError ? err.details : err?.jsonResponse;
+
+  const errorBody = {
+    statusCode: status,
+    path: req.path,
+    message: err?.message || 'Internal error',
+    error,
+  };
+
+  logger.debug(errorBody);
+
   res
     .status(status)
-    .send({
-      statusCode: status,
-      path: req.path,
-      message: err?.message || 'Internal error',
-      error,
-    });
+    .send(errorBody);
 }
