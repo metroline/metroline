@@ -4,6 +4,11 @@
 <h1 align="center">
   Metroline
 </h1>
+<p align="center">
+    <a href="https://discord.gg/zsb79pJEBj" target="_blank">
+        <img alt="Discord" src="https://img.shields.io/discord/790901937699815424?label=community">
+    </a>
+</p>
 
 Open Source Continuous Integration and Delivery platform built with Docker, NodeJS, React, D3 and Socket.io.
 
