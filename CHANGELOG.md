@@ -1,3 +1,10 @@
+## [1.2.3](https://github.com/metroline/metroline/compare/v1.2.2...v1.2.3) (2021-02-09)
+
+
+### Bug Fixes
+
+* missing migrations dir in docker image ([85bd685](https://github.com/metroline/metroline/commit/85bd685e7622d6532490a756fa7216d49af145ca))
+
 ## [1.2.2](https://github.com/metroline/metroline/compare/v1.2.1...v1.2.2) (2020-11-02)
 
 
