@@ -11,12 +11,11 @@ RUN apk add --no-cache git \
 
 FROM node:12-alpine
 
-COPY --from=build /repo/dist/server.js /app//dist/
-COPY --from=build /repo/dist/server.js.map /app//dist/
+COPY --from=build /repo/dist/server.js /app/dist/
+COPY --from=build /repo/dist/server.js.map /app/dist/
+COPY --from=build /repo/migrations /app/migrations
 COPY --from=build /repo/node_modules/ /app/node_modules
 COPY --from=build /repo/migrate-mongo-config.js /app/
-
-RUN mkdir -p /app/migrations
 
 WORKDIR /app
 
