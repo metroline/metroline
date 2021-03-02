@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/metroline/metroline/compare/v1.2.3...v1.3.0) (2021-03-02)
+
+
+### Features
+
+* pipeline status unclear in git server ([#20](https://github.com/metroline/metroline/issues/20)) ([51dfc3f](https://github.com/metroline/metroline/commit/51dfc3f3c2e9d50c9f91b998eccc1c43bc77e900))
+
 ## [1.2.3](https://github.com/metroline/metroline/compare/v1.2.2...v1.2.3) (2021-02-09)
 
 
