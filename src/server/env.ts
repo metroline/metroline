@@ -38,6 +38,7 @@ export interface Env {
   METROLINE_COOKIE_SAMESITE: boolean;
   METROLINE_COOKIE_SECURE: boolean;
   METROLINE_COMMIT_MESSAGE_SKIP_MARKER: string[];
+  METROLINE_CLONE_PROTO: string;
 }
 
 const envSpec: EnvSpec = {
@@ -80,6 +81,7 @@ const envSpec: EnvSpec = {
     transform: stringToNumber(),
     schema: number().default(86400),
   },
+  METROLINE_CLONE_PROTO: { schema: string() },
   METROLINE_RUNNER_SECRET: { schema: string().required() },
   METROLINE_GLOBAL_SECRETS: {
     transform: stringToJson(err => {
