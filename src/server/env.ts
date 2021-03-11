@@ -81,7 +81,7 @@ const envSpec: EnvSpec = {
     transform: stringToNumber(),
     schema: number().default(86400),
   },
-  METROLINE_CLONE_PROTO: { schema: string() },
+  METROLINE_CLONE_PROTO: { string().optional().default('ssh') },
   METROLINE_RUNNER_SECRET: { schema: string().required() },
   METROLINE_GLOBAL_SECRETS: {
     transform: stringToJson(err => {
