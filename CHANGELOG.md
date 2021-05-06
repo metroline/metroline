@@ -1,3 +1,10 @@
+## [1.3.1](https://github.com/metroline/metroline/compare/v1.3.0...v1.3.1) (2021-05-06)
+
+
+### Bug Fixes
+
+* secrets with numbers not injected properly ([d43b323](https://github.com/metroline/metroline/commit/d43b323fbcbff2b3016574349d20bf303d10eadb))
+
 # [1.3.0](https://github.com/metroline/metroline/compare/v1.2.3...v1.3.0) (2021-03-02)
 
 
