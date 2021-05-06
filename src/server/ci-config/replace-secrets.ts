@@ -1,9 +1,13 @@
+import { ENV_VAR_NAME_PATTERN_BASE } from '../constants';
+
+const pattern = new RegExp(`(\\\\*)({{(${ENV_VAR_NAME_PATTERN_BASE})}})`, 'g');
+
 export async function replaceSecrets(
   plainConfig: string,
   secrets: { [secretName: string]: string },
 ): Promise<string> {
   return plainConfig.replace(
-    /(\\*)({{([A-Za-z_]+)}})/g,
+    pattern,
     (substring, leadingSlashes, marker, secretName) => {
       // if odd number of leading slash
       if (leadingSlashes && leadingSlashes.length % 2 !== 0) {

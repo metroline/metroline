@@ -15,15 +15,18 @@ describe('replaceSecrets', () => {
 test1: {{HELLO}}
 test2: {{HELLO}}
 test3: {{HELLO_WORLD}}
+test4: {{HELLO64_WORLD}}
     `, {
       HELLO: 'value',
       HELLO_WORLD: 'value2',
+      HELLO64_WORLD: 'value3',
     });
 
     expect(str).toEqual(`
 test1: value
 test2: value
 test3: value2
+test4: value3
     `);
   });
 

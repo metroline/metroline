@@ -8,8 +8,10 @@ export const JOI_OPTIONS: AsyncValidationOptions = {
   stripUnknown: true,
   convert: false,
 };
-export const ENV_VAR_NAME_PATTERN = /^[a-zA-Z_][a-zA-Z0-9_]*$/;
 export const COMMIT_STATUS_DESCRPTION = 'continuous-integration/metroline';
 export const COMMIT_STATUS_NAME = 'metroline';
 
 export const REFRESH_TOKEN_SAFETY_MARGIN = 600000; // 10 minutes
+
+export const ENV_VAR_NAME_PATTERN_BASE = '[a-zA-Z_][a-zA-Z0-9_]*';
+export const ENV_VAR_NAME_PATTERN = new RegExp(`/^${ENV_VAR_NAME_PATTERN_BASE}$/`);
