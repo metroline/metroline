@@ -1,3 +1,10 @@
+## [1.3.2](https://github.com/metroline/metroline/compare/v1.3.1...v1.3.2) (2021-05-07)
+
+
+### Bug Fixes
+
+* cannot add secret (closes [#33](https://github.com/metroline/metroline/issues/33)) ([f0ab383](https://github.com/metroline/metroline/commit/f0ab3838f225f10f756ca0ce503bca6ae0283e0a))
+
 ## [1.3.1](https://github.com/metroline/metroline/compare/v1.3.0...v1.3.1) (2021-05-06)
 
 
