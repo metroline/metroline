@@ -16,7 +16,6 @@ Open Source Continuous Integration and Delivery platform built with Docker, Node
 
 ## Links
 
-- [Demo (that builds this Repo - it's Metroline-ception !)](https://demo.metroline.io)
 - [Docs](https://docs.metroline.io)
 - [Roadmap](https://github.com/metroline/metroline/projects/1)
 
