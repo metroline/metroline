@@ -16,7 +16,7 @@ Open Source Continuous Integration and Delivery platform built with Docker, Node
 
 ## Links
 
-- [Docs](https://docs.metroline.io)
+- [Docs](https://metroline.github.io/metroline-docs/)
 - [Roadmap](https://github.com/metroline/metroline/projects/1)
 
 ## Features
